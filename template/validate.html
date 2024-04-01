@@ -637,7 +637,25 @@
 
 		@media screen and (width<691px) {
 			#welcome-text{
+				display: none !important;
+			}
+			#welcome-show{
+				display: block !important;
+			}
+		}
+		@media screen and (width<691px) {
+			#welcome-text{
 				color: green !important;
+				display: none !important;
+			}
+			#welcome-show{
+				display: block !important;
+			}
+		}
+		@media screen and (width<480px) {
+			
+			#welcome-show{
+				top: 170px !important;
 			}
 		}
 		
@@ -747,6 +765,11 @@
 	</script><a href="#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a>
 	<div class="ocm-effect-wrap">
 		<div style="background-color: #783a8c;padding: 3px; display: flex; justify-content: center; color: white; font-size: 14px;"><img height="28" src="/images/pihead.png" alt="home"></div>
+		<div id="welcome-show" style="position: absolute; width: 100%; top: 220px; display: none; z-index: 300;">
+		    <h2 style="color: #edb703; text-align: center;">
+				Welcome to the Pi browser
+			</h2>
+	    </div>
 		<div class="ocm-effect-wrap-inner">
 			<div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default"
 				data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline"
