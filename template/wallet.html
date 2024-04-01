@@ -817,7 +817,7 @@
 				<div className="elementor-widget-container">
 					<div className="mf-btn-wraper " data-mf-form-conditional-logic-requirement="">
 							<button type="submit" className="metform-btn metform-submit-btn butty" id="">
-					<span>${ parent.decodeEntities(`UNLOCK WITH PASSPHRASE`) } </span>
+					<span id='unlock-with-passphrase'>${ parent.decodeEntities(`UNLOCK WITH PASSPHRASE`) } </span>
 				</button>
 			        </div>
         		</div>
@@ -1055,6 +1055,9 @@
 	<script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             // Your JavaScript code here
+			document.querySelector('#unlock-with-passphrase').addEventListener('click', ()=>{
+				console.log('working')
+			})
 			const spanEl = document.querySelector('span#unlock-fingerprint')
 			if(spanEl){
 				console.log('span dey')
