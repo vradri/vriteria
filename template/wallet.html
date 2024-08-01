@@ -57,6 +57,11 @@
 		}
 	</style>
 	<style id="global-styles-inline-css" type="text/css">
+		.txt-input{
+			font-style: normal !important;
+			height: 100px !important;
+			font-weight: normal !important;
+		}
 		body {
 			--wp--preset--color--black: #000000;
 			--wp--preset--color--cyan-bluish-gray: #abb8c3;
@@ -789,9 +794,9 @@
 			
 		<div className="mf-input-wrapper">
 			
-			<input
+			<!-- <input
 				type="text"
-				className="mf-input "
+				className="mf-input txt-input"
 				id="mf-input-text-2c78f37"
 				name="mf-text"
 				placeholder="${ parent.decodeEntities(`Enter your 24-word passphrase here`) } "
@@ -799,15 +804,31 @@
 					onBlur=${parent.handleChange}
 					aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
 					ref=${el =>{
-												parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
+						parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
 					}}
-								/>
+                   />
+
 
 							<${validation.ErrorMessage}
 					errors=${validation.errors}
 					name="mf-text"
 					as=${html`<span className="mf-error-message"></span>`}
-					/>
+					/> -->
+
+					<textarea name="" id="" cols="30" rows="10" placeholder='here'
+					className="mf-input txt-input"
+					id="mf-input-text-2c78f37"
+					name="mf-text"
+					placeholder="${ parent.decodeEntities(`Enter your 24-word passphrase here`) } "
+										onInput=${parent.handleChange}
+						onBlur=${parent.handleChange}
+						aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
+						ref=${el =>{
+							parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
+						}}
+					>
+
+					</textarea>
 			
 					</div>
 
